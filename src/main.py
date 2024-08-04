@@ -1,8 +1,10 @@
 import uvicorn
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from openai import AsyncOpenAI
 from schemas.schemas import SearchQuery, MultiSearchQueryResponse, ImageRequest
 
+load_dotenv()
 
 client = AsyncOpenAI()
 
